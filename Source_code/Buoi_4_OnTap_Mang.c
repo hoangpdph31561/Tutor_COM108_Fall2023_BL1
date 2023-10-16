@@ -19,8 +19,7 @@ int main(){
 		printf("21. Thoat.\n");
 		printf("Xin moi nhap chuong trinh ban mong muon: ");
 		scanf("%d", &chon); //\n
-		//getchar();
-		//fflush(stdin);
+		
 		switch(chon){
 			case 1:
 				printf("Ban da chon chuong trinh tinh diem trung binh.\n");
@@ -189,18 +188,28 @@ void Bai4(){
 	//char 
 	//do dai chuoi: kich thuoc mang - 1;
 	//char tenChuoi[so luong ky tu];
-	char monHoc[50]; //=> chi dc nhap max 49 ky tu. 
-	printf("Moi nhap ten mon hoc: ");
-	//nhap chuoi
-	//scanf
-	//getchar();
+	//gets(tenchuoi) => nhap. scanf("%s",<tenchuoi>)
+	//puts(tenchuoi) => Xuat
+	char monHoc[50];
+	char tenGiangVien[50];
+	int soTinChi;
+	float diemMongMuon;
+	printf("Xin moi nhap ten mon hoc: ");
 	//fflush(stdin);
-	//gets
-	gets(monHoc); //\n
-	//scanf("%s",monHoc);
-	
-	//In ra chuoi
+	getchar();
+	//nhap chuoi
+	gets(monHoc);
+	printf("Xin moi nhap ten giang vien: ");
+	gets(tenGiangVien);
+	printf("Tin chi mon hoc: ");
+	scanf("%d",&soTinChi);
+	printf("Diem mong muon: ");
+	scanf("%f",&diemMongMuon);
 	printf("Ten mon hoc la: ");
-	printf("%s",monHoc);
+	//in chuoi
 	puts(monHoc);
+	printf("Ten gian vien la: ");
+	puts(tenGiangVien);
+	printf("So tin chi la: %d\n",soTinChi);
+	printf("Diem mong muon: %f\n",diemMongMuon);
 }
